@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Number Validation</title>
+    <script>
+        function validateNumber() {
+            var number = document.getElementById("number").value;
+            if (!isNaN(number) && number !== "") {
+                alert("Number is valid.");
+            } else {
+                alert("Please enter a valid number.");
+            }
+            return false; // Prevent form submission for demonstration
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateNumber()">
+        <label for="number">Number:</label>
+        <input type="text" id="number" name="number" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

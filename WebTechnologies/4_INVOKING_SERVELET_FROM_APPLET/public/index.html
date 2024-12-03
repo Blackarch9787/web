@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Node.js Server Example</title>
+    <script>
+        function fetchServerData() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/data", true);
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("response").innerHTML = xhr.responseText;
+                }
+            };
+
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <h1>Node.js Server Example</h1>
+    <button onclick="fetchServerData()">Fetch Data from Server</button>
+    <div id="response"></div>
+</body>
+</html>

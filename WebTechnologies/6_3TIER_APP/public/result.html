@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Result</title>
+</head>
+<body>
+    <h2>Your Score</h2>
+    <p id="scoreDisplay"></p>
+    <p id="greeting"></p>
+
+    <button onclick="location.href='/logout'">Logout</button>
+
+    <script>
+        // Placeholder for score (this would be set by server-side rendering in a real app)
+        const score = parseInt(new URLSearchParams(window.location.search).get('score')) || 0;
+
+        // Display score
+        document.getElementById("scoreDisplay").textContent = `Your Score: ${score} / 10`;
+
+        // Display greeting based on score
+        let greetingMessage = "";
+        if (score === 10) {
+            greetingMessage = "Excellent! Perfect Score!";
+        } else if (score >= 7) {
+            greetingMessage = "Great job! You scored high!";
+        } else if (score >= 4) {
+            greetingMessage = "Good effort, keep practicing!";
+        } else {
+            greetingMessage = "Keep trying, you’ll get there!";
+        }
+        document.getElementById("greeting").textContent = greetingMessage;
+    </script>
+</body>
+</html>

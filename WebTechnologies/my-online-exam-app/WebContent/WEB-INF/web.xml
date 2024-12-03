@@ -1,0 +1,29 @@
+<!-- web.xml -->
+<web-app>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ExamServlet</servlet-name>
+        <servlet-class>ExamServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ExamServlet</servlet-name>
+        <url-pattern>/ExamServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SubmitServlet</servlet-name>
+        <servlet-class>SubmitServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SubmitServlet</servlet-name>
+        <url-pattern>/SubmitServlet</url-pattern>
+    </servlet-mapping>
+</web-app>

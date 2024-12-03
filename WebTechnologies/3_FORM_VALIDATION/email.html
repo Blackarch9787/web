@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Email Validation</title>
+    <script>
+        function validateEmail() {
+            var email = document.getElementById("email").value;
+            if (email.includes("@") && email.includes(".")) {
+                alert("Email is valid.");
+            } else {
+                alert("Please enter a valid email address.");
+            }
+            return false; // Prevent form submission for demonstration
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateEmail()">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
